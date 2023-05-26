@@ -86,4 +86,100 @@ if(keyPressed == '39')
     right();
     console.log("direita");
 }
+if(keyPressed == '87')
+{
+    newImage('wall.jpg');
+    console.log("w");
+}
+if(keyPressed == '71')
+{
+    newImage('ground.png');
+    console.log("g");
+}
+if(keyPressed == '76')
+{
+    newImage('light_green.png');
+    console.log("l");
+}
+if(keyPressed == '84')
+{
+    newImage('trunk.jpg');
+    console.log("t");
+}
+if(keyPressed == '82')
+{
+    newImage('roof.jpg');
+    console.log("r");
+}
+if(keyPressed == '89')
+{
+    newImage('yellow_wall.png');
+    console.log("y");
+}
+if(keyPressed == '68')
+{
+    newImage('dark_green.png');
+    console.log("d");
+}
+if(keyPressed == '85')
+{
+    newImage('unique.png');
+    console.log("u");
+}
+if(keyPressed == '67')
+{
+    newImage('cloud.jpg');
+    console.log("c");
+}
+
+function up()
+{
+    if(playerY >=0)
+    {
+    playerY = playerY - blockImageHeight;
+    console.log("altura da imagem do bloco = " + blockImageHeight);
+    console.log("quando a tecla direcional cima for pressionada, X = " + playerX + " , Y = "+playerY);
+    canvas.remove(playerObject);
+    playerUpdate();
+    }
+}
+
+function down()
+{
+    if(playerY <=500)
+    {
+    playerY = playerY - blockImageHeight;
+    console.log("altura da imagem do bloco = " + blockImageHeight);
+    console.log("quando a tecla direcional baixo for pressionada, X = " + playerX + " , Y = "+playerY);
+    canvas.remove(playerObject);
+    playerUpdate();
+    }
+}
+
+function left()
+{
+    if(playerX >0)
+    {
+    playerX = playerX - blockImageHeight;
+    console.log("altura da imagem do bloco = " + blockImageHeight);
+    console.log("quando a tecla direcional esquerda for pressionada, X = " + playerX + " , Y = "+playerY);
+    canvas.remove(playerObject);
+    playerUpdate();
+    }
+}
+
+function right()
+{
+    if(playerX <=850)
+    {
+    playerX = playerX - blockImageHeight;
+    console.log("altura da imagem do bloco = " + blockImageHeight);
+    console.log("quando a tecla direcional direita for pressionada, X = " + playerX + " , Y = "+playerY);
+    canvas.remove(playerObject);
+    playerUpdate();
+    }
+}
+
+
+
 }

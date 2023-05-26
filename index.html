@@ -12,17 +12,18 @@
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
-<body>
+<body class="bodyBackground">
 
 	<center>
 
-	<h2>MINECRAFT</h2>
+	<h2 class="btn-primary">MINECRAFT</h2>
 
-	<div id="headInfo">
-		<h3>Largura atual  = </h3>
-		<h3>Altura atual  = </h3>
+	<div id="headInfo" class="btn-danger">
+		<h3>Largura atual  = <span id="currentWidth">30</span></h3>
+		<h3>Altura atual  =  <span id="currentHeight">30</span></h3>
 	</div>
 
+	<canvas width="1000" height="600" id="myCanvas"></canvas>
 	</center>
 	<script src="main.js"></script>
 </body>
