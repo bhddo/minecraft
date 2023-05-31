@@ -57,7 +57,7 @@ function myKeyDown(e)
         document.getElementById("currentWidth").innerHTML = blockImageWidth;
         document.getElementById("currentHeight").innerHTML = blockImageHeight;   
 }
-if(e.shiftKey == true && keyPressed == '77')
+if(e.shiftKey && keyPressed == '77')
 {
     console.log("m e shift pressionadas juntas");
     blockImageWidth = blockImageWidth - 10;    
@@ -131,7 +131,7 @@ if(keyPressed == '67')
     newImage('cloud.jpg');
     console.log("c");
 }
-
+}
 function up()
 {
     if(playerY >=0)
@@ -148,7 +148,7 @@ function down()
 {
     if(playerY <=500)
     {
-    playerY = playerY - blockImageHeight;
+    playerY = playerY + blockImageHeight;
     console.log("altura da imagem do bloco = " + blockImageHeight);
     console.log("quando a tecla direcional baixo for pressionada, X = " + playerX + " , Y = "+playerY);
     canvas.remove(playerObject);
@@ -160,8 +160,8 @@ function left()
 {
     if(playerX >0)
     {
-    playerX = playerX - blockImageHeight;
-    console.log("altura da imagem do bloco = " + blockImageHeight);
+    playerX = playerX - blockImageWidth;
+    console.log("altura da imagem do bloco = " + blockImageWidth);
     console.log("quando a tecla direcional esquerda for pressionada, X = " + playerX + " , Y = "+playerY);
     canvas.remove(playerObject);
     playerUpdate();
@@ -172,8 +172,8 @@ function right()
 {
     if(playerX <=850)
     {
-    playerX = playerX - blockImageHeight;
-    console.log("altura da imagem do bloco = " + blockImageHeight);
+    playerX = playerX + blockImageWidth;
+    console.log("altura da imagem do bloco = " + blockImageWidth);
     console.log("quando a tecla direcional direita for pressionada, X = " + playerX + " , Y = "+playerY);
     canvas.remove(playerObject);
     playerUpdate();
@@ -182,4 +182,4 @@ function right()
 
 
 
-}
+
